@@ -48,21 +48,25 @@ body {
 
 .site-header {
   position: sticky;
-  top: 12px;
+  top: 0;
   z-index: 40;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   background: rgba(248, 245, 239, 0.92);
-  border: 1px solid rgba(215, 208, 195, 0.95);
-  border-radius: 20px;
+  border-top: 0;
+  border-bottom: 1px solid rgba(215, 208, 195, 0.95);
   backdrop-filter: blur(9px);
-  box-shadow: 0 14px 30px rgba(20, 26, 20, 0.08);
+  box-shadow: 0 8px 20px rgba(20, 26, 20, 0.08);
 }
 
 .header-inner {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap: 14px;
-  padding: 10px 18px;
+  gap: 10px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 6px 18px;
 }
 
 .nav-group {
@@ -83,7 +87,7 @@ body {
 .site-footer a {
   text-decoration: none;
   color: var(--ink);
-  font-size: 0.9rem;
+  font-size: 0.84rem;
   font-weight: 600;
   letter-spacing: 0.01em;
 }
@@ -100,7 +104,7 @@ body {
 }
 
 .brand-logo {
-  width: min(235px, 24vw);
+  width: min(150px, 17vw);
   height: auto;
   display: block;
 }
@@ -111,7 +115,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  padding: 10px 16px;
+  padding: 8px 14px;
   font-weight: 700;
   text-decoration: none;
   border: 1px solid transparent;
@@ -126,7 +130,7 @@ body {
 
 .nav-group .header-cta {
   color: #fefbf4;
-  padding: 10px 18px;
+  padding: 8px 14px;
 }
 
 .btn-ghost {
@@ -157,6 +161,8 @@ body {
 
 .mobile-menu {
   display: none;
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
 .hero,
@@ -434,7 +440,7 @@ p {
 
 @media (max-width: 1100px) {
   .brand-logo {
-    width: min(205px, 24vw);
+    width: min(138px, 20vw);
   }
 
   .nav-group {
@@ -465,6 +471,7 @@ p {
   .header-inner {
     grid-template-columns: 1fr auto;
     align-items: center;
+    padding: 8px 18px;
   }
 
   .nav-group {
@@ -476,7 +483,7 @@ p {
   }
 
   .brand-logo {
-    width: min(205px, 56vw);
+    width: min(150px, 48vw);
   }
 
   .menu-toggle {
@@ -527,7 +534,7 @@ p {
   }
 
   .brand-logo {
-    width: min(175px, 58vw);
+    width: min(132px, 52vw);
   }
 
   .service-grid,
